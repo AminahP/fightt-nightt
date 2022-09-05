@@ -1,0 +1,73 @@
+/* HOW CAN I CHANGE THE SIZE OF MY BACKGROUND IMAGE 
+NEED HELP WITH GIT SAYS I HAVE 2 DIFFERENT REPOS
+IN HTML I NEED TO ADD */
+/**/
+/**/
+/**/
+/**/
+/* .content{
+    display:flex;
+    flex-direction: none;
+}
+
+
+
+.button:hover{
+ background-color: dodgerblue;
+ border: 3px solid;
+}
+
+h1{
+    text-align: center;
+    color: crimson;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} 
+
+ .Body{ 
+background-image: url("boxing-ring-cartoon-concept-free-vector.webp");
+background-size: 0;
+width: 10px;
+height: 300px;
+
+} 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.playerImage{
+    border: 1px solidblack;
+    width: 30vw;
+    height: 40vh;
+    background-image: url("");
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 20px 10px white;
+    
+
+    ---- change background imagw size 
+}
+
+*/
+.Body{ 
+    background-image: url("boxing-ring-cartoon-concept-free-vector.webp");
+    background-size: 0;
+    width: 10px;
+    height: 0px;
+    color: whitesmoke, black;
+    
+    } 
+
+div{
+    color: brown /* change color*/
+    
+}
+
+h1{
+    text-align: center;
+    color: crimson;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} 
