@@ -1,6 +1,6 @@
 // the fighter attack why is it not working
 //need to makes buttons 
-// 
+// 10.14 on pt 3
 
 
 
@@ -43,9 +43,9 @@ let fighterMoves = {
   let enemyAttack = function(){ 
     let calcBaseDamage;
     if (enemy.punch > 0){ //change value later
-      calcBaseDamage = enemy.strength * enemy.punch / 100 
+      calcBaseDamage = enemy.strength * enemy.punch / 1000
     } else{
-      calcBaseDamage = enemy.strength * enemy.agility / 100
+      calcBaseDamage = enemy.strength * enemy.agility / 1000
     } 
     let offsetDamage = Math.floor(Math.random()* Math.floor(10));
     let calcOutputDamage = calcBaseDamage + offsetDamage;
@@ -53,7 +53,8 @@ let fighterMoves = {
     let numofHits = Math.floor(Math.random()* Math.floor(enemy.agility / 10)/2)+ 1;
     let attackValues = [calcOutputDamage, numofHits];
      return attackValues;
-  }
+  },
+  let getFighterHealth = document.querySelector(".health-fighter");
 }
 
 let enemy = 0
