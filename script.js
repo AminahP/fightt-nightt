@@ -1,17 +1,19 @@
 // the fighter attack why is it not working
 //need to makes buttons 
 // 10.14 on pt 3
-
+// website isnt functioning how i want
+// avoid DRY code
+// 
 
 
 
 //create fighter and enemy
-let fighter;
+// let fighter;
 
 function Figther(classType,health,punch ,strength, agility, speed){
    this.classType = classType;
    this.health = health;
-   this.punch = punch
+   this.punch = punch;
    this.strength = strength;
    this.agility = agility;
    this.speed = speed;
@@ -26,7 +28,7 @@ let fighterMoves = {
   },
 
 // player attacks 
-  let fighterAttack = function(){ 
+   fighterAttack: function(){ 
     let calcBaseDamage;
     if (fighter.punch > 0){ //change value later
       calcBaseDamage = fighter.strength * fighter.punch / 100 
@@ -40,7 +42,7 @@ let fighterMoves = {
     let attackValues = [calcOutputDamage, numofHits];
      return attackValues;
   },
-  let enemyAttack = function(){ 
+  enemyAttack: function(){ 
     let calcBaseDamage;
     if (enemy.punch > 0){ //change value later
       calcBaseDamage = enemy.strength * enemy.punch / 1000
@@ -54,15 +56,16 @@ let fighterMoves = {
     let attackValues = [calcOutputDamage, numofHits];
      return attackValues;
   },
-  let getFighterHealth = document.querySelector(".health-fighter");
+  getFighterHealth : document.querySelector(".health-fighter"),
+  getEnemyHealth : document.querySelector('.health-enemy')
 }
 
-let enemy = 0
+// let enemy = 0
 
 function Enemy(enemyType,health, punch, strength, agility, speed){
     this.classType = enemyType;
     this.health = health;
-    this.punch = punch
+    this.punch = punch;
     this.strength = strength;
     this.agility = agility;
     this.speed = speed;
@@ -72,7 +75,7 @@ function Enemy(enemyType,health, punch, strength, agility, speed){
 
  //               GAME PLAY 
 
- let gamePlay = {
+ const gamePlay = {
     setGamestart: function(classType){
       this.resetFighter(classType);
       this.setPreFight();
@@ -88,26 +91,22 @@ function Enemy(enemyType,health, punch, strength, agility, speed){
           fighter = new Fighter(classType,100,200,70 ) // do for each character can rewrite as if else to make it easier for me
           break;
 
-          // case "Pearly":
-          // fighter = new Fighter(classType,100,200,70 ) // do for each character can rewrite as if else to make it easier for me
-          // break;
-
-          // case "Karyn":
-          // fighter = new Fighter(classType,100,200,70 ) // do for each character can rewrite as if else to make it easier for me
-          // break;
+          
       }
       let getInterface = document.querySelector(".interface");
-      getInterface.innerHTML = '<img src=" /' + classType.toLowerCase()+ '.png" class="img-avatar><div><h3>'+ classType + 
-      '</h3><p>Health: ' + this.health +  '</p><p>Strength;' + this.strength + 
+      getInterface.innerHTML = '<img src=/Users/aminahpitt/Desktop/images/41.png" ' + classType.toLowerCase()+ '.png" class="img-41><div><h3>'+ classType + 
+      '</h3><p class="health-fighter">Health: ' + this.health +  '</p><p>Strength;' + this.strength + 
       '</p><p>Agility' + this.agility + '</p><p>Speed' + this.speed + '</p></div>';
-    },  // health punch strength agility speed
+    }, 
+    
+    // health punch strength agility speed
      setPreFight(){
  let getHeader = document.querySelector('header');
  let getActions = document.querySelector('actions');
  let getArena = document.querySelector('arena');
 
   getHeader.innerHTML = '<p>Task: </p>';
-  getActions.innerHTML = '<a href="#" class="btn-prefight" onclick="gamePlay.setFight()">Defend!</a>';
+  getActions.innerHTML = '<a href="#" class="btn-fight" onclick="gamePlay.setFight()">Defend!</a>';
   getArena.style.visibility = 'visible';
 
     },
@@ -142,6 +141,7 @@ getEnemy.innerHTML= '<img src="will add enemy picture later"' + enemy.enemyType.
 '</p><p>Strength: '+ enemy.strength +'</p><p>Agility: ' + enemy.agility+ '</p><p>Speed: ' + enemy.speed +'</p></div>';
 getArena.style.visibility
     }
+
  }
 
 
